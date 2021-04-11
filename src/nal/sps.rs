@@ -711,9 +711,9 @@ impl TimingInfo {
 
 #[derive(Debug, Clone)]
 pub struct CpbSpec {
-    bit_rate_value_minus1: u32,
-    cpb_size_value_minus1: u32,
-    cbr_flag: bool,
+    pub bit_rate_value_minus1: u32,
+    pub cpb_size_value_minus1: u32,
+    pub cbr_flag: bool,
 }
 impl CpbSpec {
     fn read(r: &mut RbspBitReader<'_>) -> Result<CpbSpec,RbspBitReaderError> {
